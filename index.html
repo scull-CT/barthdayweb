@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e8e4fa"><meta name="description" content="A little birthday magic. A portrait, a thousand little wishes, and a whole new chapter.">
+  <title>A little birthday magic · Just for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header class="nav"><a class="brand" href="#top" aria-label="Back to the beginning"><span class="brand-star">✳</span> a little birthday magic</a><div class="nav-right"><span class="just-for">MADE JUST FOR YOU</span><button id="sound" class="sound" aria-pressed="false" aria-expanded="false" aria-controls="music-dock" aria-label="Play birthday song"><span class="equalizer"><i></i><i></i><i></i><i></i></span><span id="sound-label">Play song</span></button></div></header>
+<aside id="music-dock" class="music-dock" aria-label="Birthday soundtrack" hidden>
+ <div class="music-heading"><span>YOUR BIRTHDAY SOUNDTRACK</span><button id="music-close" aria-label="Stop song and close player">×</button></div>
+ <div class="music-screen"><div id="youtube-player"></div></div>
+ <p id="music-status" role="status" aria-live="polite">Loading your song…</p>
+ <a class="youtube-link" href="https://www.youtube.com/watch?v=rV1ZJ1wRgUg" target="_blank" rel="noopener noreferrer">Open song on YouTube ↗</a>
+</aside>
+<main>
+<section class="story" id="top" aria-label="Birthday portrait that turns into particles as you scroll">
+ <div class="stage">
+  <div class="ambient orb-one"></div><div class="ambient orb-two"></div>
+  <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+  <div class="hero-heading"><p class="eyebrow">THE WORLD GOT A LITTLE BRIGHTER</p><h1>Happy <em>birthday.</em></h1></div>
+  <div class="side-note left-note"><span class="tiny-star">✧</span><p>A whole day.<br>All about <em>you.</em></p><span class="small-rule"></span></div>
+  <div class="side-note right-note"><span class="hand-star">✳</span><p>Here’s to your<br>next beautiful chapter.</p></div>
+  <img class="portrait-fallback" src="assets/portrait.png" alt="The birthday star in a red shirt, with the background removed">
+  <canvas id="portrait" aria-hidden="true"></canvas>
+  <span class="floating-star star-a" aria-hidden="true">✦</span><span class="floating-star star-b" aria-hidden="true">✧</span><span class="floating-star star-c" aria-hidden="true">✧</span>
+  <div class="hero-bottom"><span>A SMALL CELEBRATION OF YOU</span><a class="scroll-cue" href="#wishes"><span>Scroll for a little magic</span><i>↓</i></a><span class="chapter">01 — THE BIRTHDAY STAR</span></div>
+  <div class="dissolve-message"><p class="eyebrow">A THOUSAND LITTLE PIECES OF MAGIC</p><h2>You make life<br>a little more <em>beautiful.</em></h2><p>May all the good you put into the world<br>find its way back to you.</p><span class="message-star">✧</span></div>
+  <div class="story-progress" aria-hidden="true"><div></div></div>
+ </div>
+</section>
+<section class="memories" id="memories" aria-label="Three birthday photo scenes">
+ <article class="photo-scene scene-blue">
+  <div class="scene-image"><img src="assets/moment-blue.jpg" alt="A birthday portrait in a blue checked shirt" loading="lazy"></div><div class="scene-shade"></div>
+  <div class="scene-caption"><p class="eyebrow">02 / A FEW MOMENTS. ALL YOU.</p><h2>YOUR OWN<br>KIND OF <span>MAGIC.</span></h2><p>Never stop being exactly who you are.</p></div>
+  <div class="scene-bottom"><span>THE LITTLE MOMENTS</span><span>01 / 03</span><a href="#scene-sunshine" aria-label="Next photo: a little sunshine">KEEP SCROLLING <span>↓</span></a></div>
+ </article>
+ <article class="photo-scene scene-yellow" id="scene-sunshine">
+  <div class="scene-image"><img src="assets/moment-yellow.jpg" alt="A portrait in a bright yellow kurta and glasses" loading="lazy"></div><div class="scene-shade"></div>
+  <div class="scene-caption"><p class="eyebrow">A LITTLE SUNSHINE GOES A LONG WAY</p><h2>MORE LIGHT.<br>MORE LIFE.<br><span>MORE YOU.</span></h2><p>Here’s to all the colour you bring to the world.</p></div>
+  <div class="scene-bottom"><span>A LITTLE EXTRA SUNSHINE</span><span>02 / 03</span><a href="#scene-chapter" aria-label="Next photo: the next chapter">KEEP SCROLLING <span>↓</span></a></div>
+ </article>
+ <article class="photo-scene scene-suit" id="scene-chapter">
+  <div class="scene-image"><img src="assets/moment-suit.jpg" alt="A full-length portrait in a blue suit" loading="lazy"></div><div class="scene-shade"></div>
+  <div class="scene-caption"><p class="eyebrow">THE NEXT CHAPTER LOOKS GOOD ON YOU</p><h2>GO MAKE<br><span>IT YOURS.</span></h2><p>New dreams. New doors. The same wonderful you.</p></div>
+  <div class="scene-bottom"><span>JUST GETTING STARTED</span><span>03 / 03</span><a href="#wishes">A FEW WISHES FOR YOU <span>↗</span></a></div>
+ </article>
+</section>
+<section class="wishes section-pad" id="wishes">
+ <div class="section-top reveal"><p class="eyebrow">03 / A FEW WISHES FOR YOU</p><span>WITH LOVE, ALWAYS ↗</span></div>
+ <div class="wish-intro reveal"><h2>Another year.<br><em>Endless possibilities.</em></h2><p>No grand advice. Just a few little things<br>we hope this next trip around the sun brings.</p></div>
+ <div class="wish-list">
+  <article class="wish-row reveal"><span class="wish-number">01</span><h3>The kind of joy<br>that <em>stays.</em></h3><p>More uncontrollable laughter.<br>More little moments that become<br>your favourite memories.</p><span class="wish-art joy" aria-hidden="true">✳</span></article>
+  <article class="wish-row reveal"><span class="wish-number">02</span><h3>Dreams a little<br><em>bigger.</em></h3><p>The courage to start something new.<br>The room to grow. And a thousand<br>reasons to keep going.</p><span class="wish-art dreams" aria-hidden="true">✧</span></article>
+  <article class="wish-row reveal"><span class="wish-number">03</span><h3>Love in all the<br><em>little things.</em></h3><p>Good people around your table.<br>Peace in your everyday.<br>And a heart that feels at home.</p><span class="wish-art love" aria-hidden="true">♡</span></article>
+ </div>
+</section>
+<div class="ribbon" aria-hidden="true"><div>MORE LAUGHTER <span>✦</span> MORE ADVENTURES <span>✦</span> MORE YOU <span>✦</span> MORE LAUGHTER <span>✦</span> MORE ADVENTURES <span>✦</span> MORE YOU <span>✦</span></div></div>
+<section class="finale section-pad" id="wish">
+ <p class="eyebrow reveal">04 / THIS MOMENT IS YOURS</p>
+ <div class="cake-wrap reveal"><div class="cake" aria-hidden="true"><div class="candle"><span class="flame"></span><span class="wick"></span></div><div class="icing"></div><div class="cake-body"><i></i><i></i><i></i><i></i><i></i></div><div class="plate"></div></div><span class="cake-spark spark-one">✧</span><span class="cake-spark spark-two">✦</span></div>
+ <h2 class="reveal">Close your eyes.<br><em>Make a wish.</em></h2>
+ <p class="finale-copy reveal" id="wish-copy">Something wonderful is waiting for you.<br>Here’s to a year that feels as good as this moment.</p>
+ <button id="celebrate" class="celebrate reveal"><span>Blow out the candle</span><span aria-hidden="true">↗</span></button>
+ <p class="birthday-bengali reveal" lang="bn">শুভ জন্মদিন। ভালো থেকো, নিজের মতো থেকো।</p>
+ <div class="wish-success" role="status" aria-live="polite"></div>
+</section>
+</main>
+<footer><a href="#top" class="brand"><span class="brand-star">✳</span> a little birthday magic</a><span>A LITTLE LOVE. A LITTLE STARDUST. ALL FOR YOU.</span><a href="#top" class="back-top">Back to the magic ↑</a></footer>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script src="app.js"></script>
+</body>
+</html>
